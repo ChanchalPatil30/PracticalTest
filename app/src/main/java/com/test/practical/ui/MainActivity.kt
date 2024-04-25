@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
             apiCall()
         })
 
-        val myWorkRequest = PeriodicWorkRequest.Builder(MyWork::class.java, 120, TimeUnit.MINUTES)
+        val myWorkRequest = PeriodicWorkRequest.Builder(MyWork::class.java, 2, TimeUnit.HOURS)
             .build()
 
         WorkManager.getInstance(this).enqueue(myWorkRequest)
